@@ -261,6 +261,16 @@
     z-index: -10;
     width: 1920px;
   }
+  .mark-text{
+    color: #fff;
+    background-color: black;
+    padding: 5px;
+}
+.small-qoute{
+    color: #fff;
+    background-color: black;
+    padding: 5px;
+}
 
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
