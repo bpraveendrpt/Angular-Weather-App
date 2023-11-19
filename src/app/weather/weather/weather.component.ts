@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { WeatherData } from 'src/app/models/weather.model';
+import { WeatherService } from 'src/app/services/weather.service';
 
 @Component({
   selector: 'app-weather',
@@ -7,11 +9,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeatherComponent implements OnInit {
 
-  constructor() { }
+  constructor(private weatherService: WeatherService) { 
+
+  }
+  weatherData?: WeatherData;
+  cityName: string= 'chicago';
 
   ngOnInit(): void {
+    this.getWeatherData(this.cityName);
+   // this.cityName= '';
   }
-  // API KEY AND URL
-  //const apiKey = '626d99c5df067c8d642c15ab3dfbd2a3';
-  // const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${state}&appid=${apiKey}`;
+  
+  public onSubmit(){
+
+    console.log("praveen");
+    
+
+    this.getWeatherData(this.cityName);
+    this.cityName= '';
+  }
+  private getWeatherData(cityName: string){
+    this.weatherService.getWeatherData(cityName)
+    .subscribe({
+      next: (respose) => {
+        this.weatherData = respose;
+        console.log(respose);
+      }
+    });
+  }
 }

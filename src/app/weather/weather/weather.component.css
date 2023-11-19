@@ -1,6 +1,5 @@
 .search-bar{
-   
-    position: absolute;
+    
     left: 0;
     right: 0;
     height: 60px;
@@ -11,14 +10,22 @@
     font-weight: 600;
     padding: 15px;
 }
+.search-bar-section{
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+}
+
 .search{
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 70%;
 }
 .search-container{
     position: relative;
-    width: 100%;
+
 }
 .search-container input{
 padding: 10px 30px;
@@ -31,6 +38,62 @@ padding: 10px 30px;
     height: 40px;
     width: 90px;
     border-radius: 0px 4px 4px 0px;
-    text-align: center;
+    cursor: pointer;
+    border-style:none;
 }
-
+.wr-controls{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.item-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1976d2;
+    color: #fff;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.agm-map {
+    height: 300px;
+  }
+.weather-dashboard{
+       
+    display: flex; 
+    margin-top: 16px;
+    justify-content: center;
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+  }
+  .flex-container > div {
+     width: 50%;
+     margin-top: 50px;
+     padding-left: 5%;
+    padding-bottom: 5%;
+    
+  }
+  .location-section > div > span{
+    color: #fff;
+  }
+  
+  .location-section > div > span.time{
+    color: #d25119;
+    font-weight: bold;
+  }
+  .time-section{
+    display: flex;
+    margin-top: 20px;
+    
+  }
+  .time-section > div{
+    margin: 10px;
+    color: #fff;
+  }
+  .about-state-sec > p{
+    color: #000;
+    font-weight: 500;
+  }

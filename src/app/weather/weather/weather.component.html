@@ -1,12 +1,62 @@
+
+
 <div class="container search-bar">
-  <div class="row">
     <div class="search">
       <div class="search-container">
-        <input type="text" placeholder="Search city" class="" />
+        <!-- <form #form="ngForm" (submit)="onSubmit()"> -->
+          <input type="text" placeholder="Search city" name="city" [(ngModel)]="cityName"/>
+          <button type="submit" class="button-round dark" (click)="onSubmit()"> Search</button>
+        <!-- </form> -->
+       
       </div>
-      <button data-v-68963a64="" type="submit" class="button-round dark">
-        Search
-      </button>
     </div>
+    <div class="wr-controls">
+        <div class="item-list list-01">Metric: °C, m/s</div>
+        <div class="item-list list-02">Imperial: °F, mph</div>
+     </div>
+</div>
+  
+  <!-- <div>
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+  add additional components, markers, etc. here
+</agm-map>
+</div> -->
+<div class="flex-container">
+  <div class="location-section">
+    <div>
+    <span class="time">Nov 17, 11:54am</span>
+    <h2>Farmington Hills, US</h2>
+    <img width="40" alt="Angular Logo" src="../assets/images/cloudy-md.png" />
+    <span>7°C</span>
   </div>
+    <div class="time-section">
+      <div>Now
+        <img width="40" alt="Angular Logo" src="../assets/images/sun-sm.png" />
+      </div>
+      <div>5:30 PM
+        <img width="40" alt="Angular Logo" src="../assets/images/cloudy-md.png" />
+      </div>
+      <div>6:00 PM
+        <img width="40" alt="Angular Logo" src="../assets/images/moon-md.png" />
+      </div>
+      <div>6:30 PM
+        <img width="40" alt="Angular Logo" src="../assets/images/sun-md.png" />
+      </div>
+      <div>7:00 PM
+        <img width="40" alt="Angular Logo" src="../assets/images/cloudy-md.png" />
+      </div>
+      <div>7:30 PM
+        <img width="40" alt="Angular Logo" src="../assets/images/cloudy-md.png" />
+      </div>
+      <div>8:00 PM
+        <img width="40" alt="Angular Logo" src="../assets/images/moon-sm.png" />
+      </div>
+    </div>
+      
+    
+  </div>
+  <div class="about-state-sec"> 
+    <p>Michigan experiences large seasonal changes in temperature, with warm, humid summers and cold winters. The Great Lakes play an important role in moderating the state's climate, causing it to be more temperate and moist than other north-central states.</p>
+  </div>
+ 
 </div>

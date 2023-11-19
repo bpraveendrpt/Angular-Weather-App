@@ -58,13 +58,22 @@
 
   .content {
     display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
-    flex-direction: column;
+    /* margin: 50px auto 32px; */
+    padding: 50px 0px 50px 0px; 
+    
     align-items: center;
+    background: url(../assets/images/wri-img.jpg) no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    background-size: 100% 100%;
+    height: auto;
+    width: 100vw;
+   flex-direction: row;    
   }
-
+  
+  .content > h1 {
+    opacity: 0.5 !important;
+  }
   svg.material-icons {
     height: 24px;
     width: auto;
@@ -83,6 +92,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 16px;
+    
   }
 
   .card {
@@ -272,6 +282,8 @@
     padding: 5px;
 }
 
+
+
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
     .card-container > *:not(.circle-link) ,
@@ -300,3 +312,4 @@
       visibility: hidden;
     }
   }
+
